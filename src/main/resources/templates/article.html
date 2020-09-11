@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title th:text=#{label.article_title}></title>
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+
+</head>
+<body>
+	<div style="text-align: right; padding: 5px; margin: 5px 0px;">
+		<a th:href="@{?lang=en}">English</a>
+		<a th:href="@{?lang=vi}">Tiếng Việt</a>
+	</div>
+	<h3 th:text=#{label.article_title}
+		class=" mb-3 row justify-content-center align-items-center"></h3>
+	<div class="container my-3">
+		<div class="row justify-content-center align-items-center">
+			<p th:text=#{label.article_content}></p>
+			<a th:text=#{label.back} class="btn btn-outline-success ml-3"
+				th:href="@{/}"></a>
+		</div>
+	</div>
+</body>
+</html>
